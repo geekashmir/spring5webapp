@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+        <title>Spring Boot Thymeleaf Hello World Example</title>
+
+
+</head>
+
+<body>
+<h1>
+    booklist
+</h1>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>publisher id</th>
+    </tr>
+    <tr th:each="book:${books}">
+        <td th:text="${book.id}">123</td>
+        <td th:text="${book.title}">123</td>
+        <td th:text="${book.publisher.id}">123</td>
+    </tr>
+</table>
+</body>
+</html>

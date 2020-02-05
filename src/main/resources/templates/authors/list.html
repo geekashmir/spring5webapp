@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+        <title>Spring Boot Thymeleaf Hello World Example</title>
+
+
+</head>
+
+<body>
+<h1>
+    authorlist
+</h1>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>nome</th>
+        <th>cognome</th>
+    </tr>
+    <tr th:each="author:${authors}">
+        <td th:text="${author.id}">123</td>
+        <td th:text="${author.firstName}">123</td>
+        <td th:text="${author.lastName}">123</td>
+    </tr>
+</table>
+</body>
+</html>
